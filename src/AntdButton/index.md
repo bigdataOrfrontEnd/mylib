@@ -1,6 +1,6 @@
 ---
 category: Components
-title: Button 按钮 # 组件的标题，会在菜单侧边栏展示
+title: AntdButton 按钮 # 组件的标题，会在菜单侧边栏展示
 toc: content # 在页面右侧展示锚点链接
 group: # 分组
   title: 基础组件 # 所在分组的名称
@@ -9,14 +9,14 @@ group: # 分组
 
 ​
 
-# Button 按钮
+# AntdButton 按钮
 
 ​
 
 ## 介绍
 
 ​
-基础的按钮组件 Button。
+基于 antd 组件库二次封装的 Button 按钮。
 ​
 
 ## 示例
