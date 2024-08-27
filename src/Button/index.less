@@ -1,28 +1,82 @@
-// src/Button/styles/index.less
-@import '../variables.less';
-
-.dumi-btn {
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
   font-size: 14px;
-  height: 32px;
-  padding: 4px 15px;
-  border-radius: 6px;
-  transition: all 0.3s;
+  border-radius: 4px;
+  border: 1px solid transparent;
   cursor: pointer;
+  transition: all 0.3s;
 }
 
-.dumi-btn-default {
-  background: #fff;
-  color: #333;
-  border: 1px solid #d9d9d9;
+.primary {
+  background-color: #1890ff;
+  color: white;
+  border-color: #1890ff;
+}
 
-  &:hover {
-    color: @dumi-primary;
-    border-color: @dumi-primary;
+.primary:hover {
+  background-color: #40a9ff;
+  border-color: #40a9ff;
+}
+
+.default {
+  background-color: white;
+  color: rgba(0, 0, 0, 0.85);
+  border-color: #d9d9d9;
+}
+
+.default:hover {
+  background-color: #f5f5f5;
+  border-color: #d9d9d9;
+}
+
+.dashed {
+  background-color: white;
+  color: rgba(0, 0, 0, 0.85);
+  border-color: #d9d9d9;
+  border-style: dashed;
+}
+
+.text {
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.85);
+  border-color: transparent;
+}
+
+.link {
+  background-color: transparent;
+  color: #1890ff;
+  border-color: transparent;
+  text-decoration: underline;
+}
+
+.disabled {
+  background-color: #f5f5f5;
+  color: rgba(0, 0, 0, 0.25);
+  border-color: #d9d9d9;
+  cursor: not-allowed;
+}
+
+.loading {
+  cursor: not-allowed;
+}
+
+.spinner {
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #1890ff;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
-}
-
-.dumi-btn-primary {
-  color: #fff;
-  background: @dumi-primary;
-  border: 1px solid @dumi-primary;
+  100% {
+    transform: rotate(360deg);
+  }
 }
