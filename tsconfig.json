@@ -10,8 +10,7 @@
       "@@/*": [".dumi/tmp/*"],
       "mylib": ["src"],
       "mylib/*": ["src/*", "*"]
-    },
-    "typeRoots": ["./node_modules/@types", "./src/types", "./global.d.ts"]
+    }
   },
-  "include": [".dumirc.ts", "src/**/*"]
+  "include": [".dumirc.ts", "src/**/*", "./global.d.ts"]
 }

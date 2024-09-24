@@ -1,5 +1,6 @@
+import classNames from 'classnames';
 import React, { memo } from 'react';
-import styles from './index.less'; // 引入样式
+import styles from './index.module.less'; // 引入样式
 type ButtonType = 'primary' | 'default' | 'dashed' | 'text' | 'link';
 type ButtonHTMLType = 'submit' | 'button' | 'reset';
 export interface ButtonProps {
@@ -22,7 +23,12 @@ const Button: React.FC<ButtonProps> = (props) => {
     disabled = false,
     loading = false,
   } = props;
-  const buttonClass = '';
+  console.log(styles, styles['button']);
+
+  const buttonClass = classNames(styles['button'], styles[type], {
+    [styles.disabled]: disabled,
+    [styles.loading]: loading,
+  });
   return (
     <button
       type={htmlType}

@@ -5,7 +5,7 @@ export default () => {
     <>
       <Button type="default">默认按钮</Button> &nbsp;
       <Button type="primary">主要按钮</Button>
-      {/* <Button loading></Button> */}
+      <Button loading></Button>
     </>
   );
 };

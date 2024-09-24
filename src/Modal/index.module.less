@@ -1,0 +1,82 @@
+@modal-width: 500px;
+@modal-padding: 20px;
+@modal-background-color: white;
+@modal-border-radius: 4px;
+@modal-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+@modal-header-border-color: #f0f0f0;
+@modal-ok-button-color: #1890ff;
+@modal-ok-button-hover-color: #40a9ff;
+.modal-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+  }
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  
+
+  .modal-content {
+    position: relative;
+    background-color: @modal-background-color;
+    padding: @modal-padding;
+    border-radius: @modal-border-radius;
+    width: @modal-width;
+    max-width: 80%;
+    z-index: 1002;
+    box-shadow: @modal-shadow;
+  }
+
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid @modal-header-border-color;
+    padding-bottom: 10px;
+
+    .modal-title {
+      font-size: 18px;
+    }
+
+    .modal-close {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  }
+
+  .modal-body {
+    margin-top: 20px;
+  }
+
+  .modal-footer {
+    text-align: right;
+    margin-top: 20px;
+
+    .modal-ok {
+      background-color: @modal-ok-button-color;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: @modal-ok-button-hover-color;
+      }
+    }
+  }
+}
